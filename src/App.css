@@ -1,80 +1,335 @@
-body {
-    background-color: rgb(10, 54, 10);
-    color: rgb(240, 248, 255);
-}
+/* Global Styles */
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #1E293B;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  header .mainlogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  header .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #991b1b;
+    margin-left: 10px;
+  }
+  
+  /* Form Styles */
+  .form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .searchbox {
+    margin-left: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 60%;
+    font-size: 16px;
+  }
+  
+  .searchbutton {
+    background-color: #F87171;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .searchbutton:hover {
+    background-color: #F43F5E;
+    transform: translateY(-2px);
+  }
+  
+  .searchbutton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Main Container */
+  .container {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    margin-bottom: 15px;
+  }
+  
+  .text-red-900 {
+    color: #991b1b;
+  }
+  
+  .text-lg {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stock Information */
+  .addstock {
+    background-color: #F9FAFB;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .addstock .total {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .inbox {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #F87171;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Price Input Section */
+  .prices {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .stockprice, .stockalert {
+    flex: 1;
+  }
+  
+  .submit {
+    background-color: #F87171;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit:hover {
+    background-color: #F43F5E;
+    transform: translateY(-2px);
+  }
+  
+  .submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Stock List Styles */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  ul.list-group {
+  
+    list-style: none;
+    padding-left: 0;
+  }
 
 
-
-body {
-    background-color: rgb(10, 54, 10);
-    color:rgb(19, 212, 180);
-}
-
-header nav {
-    background-color: black;
-    padding: 24px;
+  .stcklist{
+    display: flex;
+   align-items: center;
+ 
+  }
+  
+  ul.list-group li {
+    background-color: #f3f4f6;
+   gap:12px;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    margin-left: 12px;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  ul.list-group li span{
+    
+background-color: rgb(198, 198, 104);
+justify-content:space-between;
+align-items: center;
+margin:7px;
+padding: 2px;
+
+border:2px seagreen;
 
 
-}
 
-header nav h1 {
 
-    font-size: 28px;
-    font-weight: bold;
-color: aliceblue;
-}
-header nav form {
+  }
 
+  
+  ul.list-group li.completed {
+    background-color: #0c0441;
+  }
+  
+  ul.list-group li .buttons {
     display: flex;
-    justify-content: center;
-
-}
-
-
-.form input[type="text"] {
-    flex-grow: 1;
-    margin-right: 16PX;
-    color: rgb(92, 131, 181);
-
-
-
-}
-
-
-.form input[type="text"],
-button[type="submit"] {
+    gap: 12px;
+  }
+  
+  ul.list-group li .buttons button {
+    background-color: #F87171;
+    color: white;
+    padding: 8px;
     border: none;
-    padding: 16px;
-    border-radius: 123px;
-    color: rgb(93, 8, 99);
-
-
-}
-
-button[type="submit"] {
-
-    background-color: rgb(242, 242, 32);
-    color: black;
+    border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-
-}
-
-button[type="submit"]:hover,
-.recipe button:hover,
-.recipe-close-button :hover {
-
-    background-color: rgb(168, 210, 96);
-}
-
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  ul.list-group li .buttons button:hover {
+    background-color: #F43F5E;
+    transform: translateY(-2px);
+  }
+  
+  ul.list-group li .buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Checkbox Styling */
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #1E293B;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .form {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+  
+    .searchbox {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .prices {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .stockprice, .stockalert {
+      width: 100%;
+    }
+  
+    .container {
+      margin: 10px;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }
+  
